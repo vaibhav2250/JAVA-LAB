@@ -1,0 +1,83 @@
+
+Java program to set the view of keys from a Java Hashtable
+
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Set;
+
+public class HashTableKeysView {
+    public static void main(String[] args) {
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+
+
+        // Adding key-value pairs to the hashtable
+        hashtable.put(1, "One");
+        hashtable.put(2, "Two");
+        hashtable.put(3, "Three");
+
+        // Getting the set view of keys from the hashtable
+        Set<Integer> keys = hashtable.keySet();
+
+        // Displaying the keys
+        System.out.println("Keys in the Hashtable:");
+        for (Integer key : keys) {
+            System.out.println(key);
+        }
+    }
+}
+
+
+
+
+Java program that demonstrates the usage of the Set interface from the Collections framework
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetUsageExample {
+    public static void main(String[] args) {
+        // Creating a HashSet
+        Set<String> set = new HashSet<>();
+
+        // Adding elements to the set
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Orange");
+
+        // Displaying the elements
+        System.out.println("Elements in the Set:");
+        for (String element : set) {
+            System.out.println(element);
+        }
+
+        // Checking if an element exists in the set
+        String searchElement = "Banana";
+        if (set.contains(searchElement)) {
+            System.out.println(searchElement + " is present in the Set");
+        } else {
+            System.out.println(searchElement + " is not present in the Set");
+        }
+
+        // Removing an element from the set
+        String removeElement = "Orange";
+        set.remove(removeElement);
+        System.out.println(removeElement + " is removed from the Set");
+
+        // Displaying the updated elements
+        System.out.println("Elements in the Set after removal:");
+        for (String element : set) {
+            System.out.println(element);
+        }
+
+        // Clearing the set
+        set.clear();
+        System.out.println("Set is cleared");
+
+        // Checking if the set is empty
+        if (set.isEmpty()) {
+            System.out.println("Set is empty");
+        } else {
+            System.out.println("Set is not empty");
+        }
+    }
+}
